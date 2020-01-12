@@ -1,8 +1,11 @@
 import React from 'react'
 
-export const RandomUser = ({user}) => {
+export const RandomUser = ({user}) => {   
    return (
-      user ? <div>{user.name}</div> : <div>NOOOOO</div>
-   )
-   
+      user && <div className="random-user__wrap">
+            <div className="random-user">
+               <h4>Случайный пользователь: <strong>{user.surname} {user.name}</strong></h4>               
+            </div>            
+      </div> 
+   )   
 }

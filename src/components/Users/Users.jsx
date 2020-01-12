@@ -13,7 +13,7 @@ class Users extends React.Component {
      
       this.interval = setInterval(() => {
          this.props.setRandomUser(arrayRandElement(this.props.users))
-         setTimeout(() => this.props.setRandomUser(null), 1500)
+         setTimeout(() => this.props.setRandomUser(null), 2000)
       }, 8000);
    }
 
@@ -26,7 +26,7 @@ class Users extends React.Component {
       const {currentUsers, pageNumbers, currentPage, setCurrentPage, randomUser} = this.props
       return (
          <>
-            <h3>Users:</h3>
+            <h3>Пользователи:</h3>
             <UsersList users={currentUsers}/>
             <Pagination pages={pageNumbers}
                         currentPage={currentPage}

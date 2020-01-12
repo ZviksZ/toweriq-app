@@ -6,9 +6,9 @@ const SET_RANDOM_USER = 'toweriq/users/SET_RANDOM_USER';
 
 let initialState = {
    users: [],
-   pageSize: 5,
-   randomUser: null,
-   currentPage: 1
+   pageSize: 5,   
+   currentPage: 1,
+   randomUser: null
 };
 
 const usersReducer = (state = initialState, action) => {   

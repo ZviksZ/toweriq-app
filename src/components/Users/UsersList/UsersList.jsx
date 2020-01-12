@@ -5,14 +5,14 @@ export default ({users}) => (
       <thead>
       <tr>
          <th>Id</th>
-         <th>First Name</th>
-         <th>Last Name</th>
-         <th>Desc</th>
+         <th>Имя</th>
+         <th>Фамилия</th>
+         <th>Описание</th>
       </tr>
       </thead>
       <tbody>
       {users.map(item =>(
-         <tr key={item.id}>
+         <tr key={item.id} className="users-table__row">
             <td>{item.id}</td>
             <td>{item.name}</td>
             <td>{item.surname}</td>
