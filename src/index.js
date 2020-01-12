@@ -1,6 +1,7 @@
-import React        from 'react';
-import ReactDOM     from 'react-dom';
-import './index.scss';
-import AppContainer from "./App.js";
+import React    from 'react';
+import ReactDOM from 'react-dom';
+import App      from "./App.js";
 
-ReactDOM.render(<AppContainer />, document.getElementById('root'));
+import './index.scss';
+
+ReactDOM.render(<App/>, document.getElementById('root'));

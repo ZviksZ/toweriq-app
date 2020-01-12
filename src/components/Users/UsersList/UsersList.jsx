@@ -1,4 +1,5 @@
-import React from 'react'
+import React           from 'react'
+import {UsersListItem} from "./UsersListItem/UsersListItem.jsx";
 
 export default ({users}) => (
    <table className="table">
@@ -11,14 +12,7 @@ export default ({users}) => (
       </tr>
       </thead>
       <tbody>
-      {users.map(item =>(
-         <tr key={item.id} className="users-table__row">
-            <td>{item.id}</td>
-            <td>{item.name}</td>
-            <td>{item.surname}</td>
-            <td>{item.desc}</td>
-         </tr>
-      ))}
+         {users.map(item => <UsersListItem key={item.id} item={item}/> )}
       </tbody>
    </table>
 )

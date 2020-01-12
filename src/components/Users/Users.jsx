@@ -16,13 +16,12 @@ class Users extends React.Component {
          setTimeout(() => this.props.setRandomUser(null), 2000)
       }, 8000);
    }
-
+   
    componentWillUnmount() {
       clearInterval(this.interval);
    }
    
    render() {
-      console.log(this.props.randomUser)
       const {currentUsers, pageNumbers, currentPage, setCurrentPage, randomUser} = this.props
       return (
          <>

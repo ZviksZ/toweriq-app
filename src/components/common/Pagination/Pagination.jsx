@@ -7,21 +7,14 @@ export const Pagination = ({pages, currentPage, setCurrentPage}) => {
    return (
       <ul className="pagination pagination-sm">
          {pages.map(page => {
-            if (page === currentPage) {
-               return <li className="page-item active"
+               const active = page === currentPage
+               return <li className={active ? "page-item active" : "page-item"}
                           id={page}
                           key={page}
-                          aria-current="page"
+                          aria-current={active ? 'page' : null}
                           onClick={() => changePage(page)}>
-                  <a className="page-link bg-info" href="#">{page}</a>
+                  <a className={active ? "page-link bg-info" : "page-link"} href="#anchor">{page}</a>
                </li>
-            }
-            return <li className="page-item"
-                       id={page}
-                       key={page}
-                       onClick={() => changePage(page)}>
-               <a className="page-link" href="#">{page}</a>
-            </li>
          })}
       </ul>
    )
