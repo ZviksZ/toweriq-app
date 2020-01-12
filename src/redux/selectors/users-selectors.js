@@ -1,8 +1,10 @@
-import {createSelector} from "reselect";
+import {createSelector}   from "reselect";
 
 export const getUsersSelector = state => state.users.users;
 export const getCurrentPageSelector = state => state.users.currentPage;
 export const getPageSizeSelector = state => state.users.pageSize;
+export const getRandomUserSelector = state => state.users.randomUser;
+
 export const getCurrentUsers = createSelector(
    [getUsersSelector, getCurrentPageSelector, getPageSizeSelector],
    (users, currentPage, pageSize) => {

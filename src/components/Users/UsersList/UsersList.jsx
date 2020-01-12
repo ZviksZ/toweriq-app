@@ -12,7 +12,7 @@ export default ({users}) => (
       </thead>
       <tbody>
       {users.map(item =>(
-         <tr>
+         <tr key={item.id}>
             <td>{item.id}</td>
             <td>{item.name}</td>
             <td>{item.surname}</td>
